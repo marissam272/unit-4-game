@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>CrystalsCollector!</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+  </head>
+  <body>
+
+    <div class="heading">
+    <h1>CrystalsCollector!</h1>
+    </div>
+
+    <div class="instructions">
+    <p>You will be given a random number at the start of the game.</p>
+    <p>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.</p>
+    <p>You win the game by matching your total score to random number, you lose the game if your total score goes above the random number.</p>
+    <p>The value of each crystal is hidden from you until you cick on it.</p>
+    <p>Each time when the game starts, the game will change the values of each crystal.</p>
+    </div>
+
+    <div id="random-total">
+
+    </div>
+
+    <div id="updates">
+        <p>You !</p>
+        <p>Wins: </p>
+        <p>Losses: </p>
+    </div>
+
+    <div class="crystals">
+        <button id="crystal-1" value="1"><h1>crystal image</h1></button>
+        <button id="crystal-2" value="1"><h1>crystal image</h1></button>
+        <button id="crystal-3" value="1"><h1>crystal image</h1></button>
+        <button id="crystal-4" value="1"><h1>crystal image</h1></button>
+    </div>
+
+    <div id="static-text">
+        <p>Your total score is: </p>
+    </div>
+
+    <div id="current-total">
+
+    </div>
+   
+
+    <script type="text/javascript">
+
+
+//Pseudocode
+// create buttons with the crystals HTML ~
+// assign random value to each crystal ~
+// assign click event to each crystal ~
+// get random value of crystal into box that updates total score
+// create box that holds total score HTML ~
+// ability to update total score after clicks
+// create box that holds the random number to reach HTML ~
+// create box that says "your total score is" HTML ~
+// create box that holds "you lost" "wins" "losses" HTML ~
+// ability to update wins and losses
+// game needs to reset after win/loss
+// when clicking crystal "push" the score to total box?
+// use addition operator to add the click events in total box
+
+// when game resets/starts, a random number is assigned to:
+// each crystal
+// random number box
+
+$(document).ready(function(){
+
+var wins = 0;
+var losses = 0;
+var crystalArray = [];
+
+var minNumber = 19;
+var maxNumber = 120
+
+var computerRandomNumber = randomNumberFromRange(minNumber, maxNumber);
+
+function randomNumberFromRange(min,max) {
+    return Math.floor(Math.random()*(max-min+1)+min);
+    }
+
+
+var minCrystalNumberOne = 1;
+var maxCrystalNumberOne = 12;
+
+var crystalRandomNumberOne = randomNumberFromRange(minCrystalNumberOne, maxCrystalNumberOne);
+
+var minCrystalNumberTwo = 1;
+var maxCrystalNumberTwo = 12;
+
+var crystalRandomNumberTwo = randomNumberFromRange(minCrystalNumberTwo, maxCrystalNumberTwo);
+
+var minCrystalNumberThree = 1;
+var maxCrystalNumberThree = 12;
+
+var crystalRandomNumberThree = randomNumberFromRange(minCrystalNumberThree, maxCrystalNumberThree);
+
+var minCrystalNumberFour = 1;
+var maxCrystalNumberFour = 12;
+
+var crystalRandomNumberFour = randomNumberFromRange(minCrystalNumberFour, maxCrystalNumberFour);
+
+$(".crystals").on("click", function randomNumberFromRange(min,max) {
+    return Math.floor(Math.random()*(max-min+1)+min);
+    })
+
+$(".crystals").on("click", function randomNumberFromRange(min,max) {
+    return Math.floor(Math.random()*(max-min+1)+min);
+    })
+
+$(".crystals").on("click", function randomNumberFromRange(min,max) {
+    return Math.floor(Math.random()*(max-min+1)+min);
+    })
+
+$(".crystals").on("click", function randomNumberFromRange(min,max) {
+    return Math.floor(Math.random()*(max-min+1)+min);
+    })
+
+
+    // how to get the crystal random numbers to add together in box?
+
+//set the value to be stored
+// $("#current-total").data("crystalRandomNumberOne");
+
+//get the stored value
+// var currentValueOne = $("#current-total").data("crystalRandomNumberOne");
+
+// console.log(currentValueOne);
+
+//you can also change the value
+// $("div").data("valuename", 101);
+
+//get the new stored value
+// var value = $("div").data("valuename");
+//outputs "101"
+// alert(value);
+
+
+});
+   </script>
+
+</body>
+</html>
