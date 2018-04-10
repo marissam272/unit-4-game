@@ -28,8 +28,8 @@
 
     <div id="updates">
         <p>You !</p>
-        <p id="numberWins">Wins: </p>
-        <p id"numberLosses">Losses: </p>
+        <p id="numberWins">Wins: 0</p>
+        <p id"numberLosses">Losses: 0</p>
     </div>
 
     <div class="crystals">
@@ -50,12 +50,9 @@
 
     <script type="text/javascript">
 
-        // how to get different random number per button?
-        // why is crystalValues pulling computerRandom?
-        // how to get totalScore to stop adding?
+         // button to restart?
 
 $(document).ready(function(){
-
 var computerRandom = Math.floor(Math.random()*120+19);
 
 $("#numberToGet").text(computerRandom);
@@ -66,17 +63,21 @@ var crystalValues2 = Math.floor(Math.random()*12+1);
 var crystalValues3 = Math.floor(Math.random()*12+1);
 var crystalValues4 = Math.floor(Math.random()*12+1);
 
-var inputOne = crystalValues1;
+console.log(crystalValues1);
+console.log(crystalValues2);
+console.log(crystalValues3);
+console.log(crystalValues4);
 
-var inputTwo = crystalValues2;
-
-var inputThree = crystalValues3;
-
-var inputFour = crystalValues4;
+// var inputOne = crystalValues1;
+// var inputTwo = crystalValues2;
+// var inputThree = crystalValues3;
+// var inputFour = crystalValues4;
 
 var wins = 0;
 var losses = 0;
 var totalScore = 0;
+
+console.log(wins);
 
 $("#numberWins").text(wins);
 $("#numberLosses").text(losses);
@@ -92,12 +93,45 @@ function reset() {
     $("#score").text(totalScore);
 }
 
+// var calc = {
+//   plus: function(a,b) {
+//     return a + b;
+//   }
+// };
+
+ $("#crystal1").on("click", function() {
+    totalScore = totalScore + crystalValues1;
+    $("#score").text(totalScore);
+    checkWinOrLose();
+    })
+
+    $("#crystal2").on("click", function() {
+    totalScore = totalScore + crystalValues2;
+    $("#score").text(totalScore);
+    checkWinOrLose();
+    })
+
+    $("#crystal3").on("click",function() {
+    totalScore = totalScore + crystalValues3;
+    $("#score").text(totalScore);
+    checkWinOrLose();
+    })
+
+    $("#crystal4").on("click", function() {
+    totalScore = totalScore + crystalValues4;
+    $("#score").text(totalScore);
+    checkWinOrLose();
+    })
+
+
 function winner() {
     alert("You Won!!");
     wins++;
     $("#numberWins").text(wins);
     reset();
 }
+
+console.log(winner);
 
 function loser() {
     alert("You Lose!!");
@@ -106,6 +140,8 @@ function loser() {
     reset();
 }
 
+console.log(loser);
+function checkWinOrLose() {
     if (totalScore === computerRandom) {
         winner();
         reset();
@@ -115,19 +151,117 @@ function loser() {
         loser();
         reset();
     } 
-
-    $(".crystals").on("click", "button", function() {
-    totalScore = totalScore + inputOne + inputTwo + inputThree + inputFour;
-    $("#score").text(totalScore);
-    })
+}
 
 });
 
-// var calc = {
-//   plus: function(a,b) {
-//     return a + b;
-//   }
-// };
+
+
+// $(document).ready(function(){
+
+// var computerRandom = Math.floor(Math.random()*120)+19;
+
+// $("#numberToGet").text(computerRandom);
+
+// // var crystalValues = {};
+// var crystalValues1 = Math.floor(Math.random()*12)+1;
+// var crystalValues2 = Math.floor(Math.random()*12)+1;
+// var crystalValues3 = Math.floor(Math.random()*12)+1;
+// var crystalValues4 = Math.floor(Math.random()*12)+1;
+
+// console.log(crystalValues1);
+
+// var inputOne = crystalValues1;
+
+// var inputTwo = crystalValues2;
+
+// var inputThree = crystalValues3;
+
+// var inputFour = crystalValues4;
+
+// var wins = 0;
+// var losses = 0;
+// var totalScore = 0;
+// var counter;
+
+// $("#numberWins").text(wins);
+// $("#numberLosses").text(losses);
+
+// function reset() {
+//     computerRandom = Math.floor(Math.random()*120)+19;
+//     $("#numberToGet").text(random);
+//     crystalValues1 = Math.floor(Math.random()*12)+1;
+//     crystalValues2 = Math.floor(Math.random()*12)+1;
+//     crystalValues3 = Math.floor(Math.random()*12)+1;
+//     crystalValues4 = Math.floor(Math.random()*12)+1;
+//     totalScore = 0;
+//     $("#score").text(totalScore);
+// }
+
+// function winner() {
+//     alert("You Won!!");
+//     wins++;
+//     $("#numberWins").text(wins);
+//     reset();
+// }
+
+// function loser() {
+//     alert("You Lose!!");
+//     losses++;
+//     $("#numberLosses").text(losses);
+//     reset();
+// }
+
+// // function binding() {
+// //     console.log("binding");
+//     $("#crystal1").on("click", "button", function() {
+//         totalScore = totalScore + inputOne;
+//         $("#score").text(totalScore);
+//     })
+
+//     $("#crystal2").on("click", "button", function() {
+//         totalScore = totalScore + inputTwo;
+//         $("#score").text(totalScore);
+//     })
+
+//     $("#crystal3").on("click", "button", function() {
+//         totalScore = totalScore + inputThree;
+//         $("#score").text(totalScore);
+//     })
+
+//     $("#crystal4").on("click", "button", function() {
+//         totalScore = totalScore + inputFour;
+//         $("#score").text(totalScore);
+//     })
+
+
+//     // function checkWinOrLose() {
+//     // console.log("checkWinOrLose");
+//     if (totalScore === computerRandom) {
+//         winner();
+//         reset();
+//     }
+
+//     else if (totalScore > computerRandom) {
+//         loser();
+//         reset();
+//     } 
+
+
+// });
+
+    // $(".crystals").on("click", "button", function() {
+    // counter = totalScore + crystalValues1 + crystalValues2 + crystalValues3 + crystalValues4;
+    // $("#score").html(totalScore);
+    // })
+
+
+
+var calc = {
+  plus: function(a,b) {
+    return a + b;
+  }
+};
 
 // function getCrystalHandler(crystalValues) {
 //     // var operator = getCrystalHandler;
