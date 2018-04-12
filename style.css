@@ -1,0 +1,16 @@
+body {
+    background-image: url("backgroundblur.jpg");
+}
+
+.heading {
+    color: blue;
+}
+
+h1 {
+    font-family: 'Georgia', Times, Times New Roman, serif;
+    background-color: #4aaaa5;
+    color: #ffffff;
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 25px;
+}
