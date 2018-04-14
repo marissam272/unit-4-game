@@ -1,16 +1,41 @@
 body {
-    background-image: url("backgroundblur.jpg");
+    background-image: url("background-blur.jpg");
+    font-family: 'Dancing Script', cursive;
+    font-size: large;
 }
 
-.heading {
-    color: blue;
+.container1 {
+    padding: 40px;
 }
 
-h1 {
-    font-family: 'Georgia', Times, Times New Roman, serif;
-    background-color: #4aaaa5;
-    color: #ffffff;
+.container {
+    border: 4px solid lightgray;
+    padding-top: 10px;
+}
+
+.container2 {
+    padding-top: 25px;
     text-align: center;
+}
+
+#numberToGet {
     font-size: 25px;
-    margin-bottom: 25px;
+}
+
+p {
+    font-family: 'Philosopher', sans-serif;
+}
+
+
+.container4 {
+    margin: 25px;
+}
+
+.btn {
+    background-image: url("background-blur.jpg");
+    border: 4px solid #D8BFD8;
+}
+
+.container5 {
+    margin-top: 25px;
 }

@@ -1,30 +1,41 @@
-/* h1 {
-    font-family: 'Georgia', Times, Times New Roman, serif;
-    background-color: #4aaaa5;
-    color: #ffffff;
-    text-align: center;
-    font-size: 25px;
-} */
-
-.container {
-    height: 100%;
-    width: 100%;
-    border-bottom: 2px solid #cccccc;
-    background-color: orange;
-    font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
-    color: white;
+body {
+    background-image: url("background-blur.jpg");
+    font-family: 'Dancing Script', cursive;
+    font-size: large;
 }
 
 .container1 {
-    padding: 50px;
-    margin: 50px;
-    border: 2px solid #666666;
-    padding: 25px;
-    text-align: center;
-    border-top: 6px solid #4aaaa5;
-    height: 200px;
+    padding: 40px;
 }
 
-.header {
-    padding: 50px;
+.container {
+    border: 4px solid lightgray;
+    padding-top: 10px;
+}
+
+.container2 {
+    padding-top: 25px;
+    text-align: center;
+}
+
+#numberToGet {
+    font-size: 25px;
+}
+
+p {
+    font-family: 'Philosopher', sans-serif;
+}
+
+
+.container4 {
+    margin: 25px;
+}
+
+.btn {
+    background-image: url("background-blur.jpg");
+    border: 4px solid #D8BFD8;
+}
+
+.container5 {
+    margin-top: 25px;
 }
